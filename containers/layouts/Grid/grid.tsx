@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { StyledContainer, StyledContainerInner } from './style';
+import { StyledContainer } from './style';
 import { SpaceProps } from '~/styles';
 
 interface IProps extends SpaceProps {
