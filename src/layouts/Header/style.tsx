@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { device } from '~/styles';
 
-export const StyledHeader = styled.header`
+export const StyledHeaderWrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;
@@ -11,11 +11,14 @@ export const StyledHeader = styled.header`
   background-color: #fff;
 `;
 
-export const StyledHeaderInner = styled.div`
+export const StyledHeader = styled.div`
+  display: flex;
+  align-items: center;
   margin: 0 auto;
   height: 80px;
+  max-width: 1280px;
+`;
 
-  max-width: 1140px;
-  ${device.large} {
-  }
+export const StyledLogoWrapper = styled.div`
+  width: 81px;
 `;

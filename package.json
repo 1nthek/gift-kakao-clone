@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3004",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3004",
     "lint": "next lint",
+    "lint:fix": "next lint:fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -30,11 +31,14 @@
     "@types/react": "17.0.11",
     "@types/styled-components": "^5.1.10",
     "@types/styled-system__theme-get": "^5.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.13.1",
-    "eslint": "7.29.0",
-    "eslint-config-next": "11.0.1",
+    "eslint": "^7.29.0",
+    "eslint-config-next": "^11.0.1",
     "eslint-config-prettier": "^8.3.0",
-    "typescript": "4.3.4"
+    "eslint-plugin-prettier": "^3.4.0",
+    "typescript": "^4.3.5"
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SpaceProps, BorderProps } from '~/styles';
 
-import { Container } from '~/containers/layouts/Grid/grid';
+import { Container } from '~/layouts/Grid/grid';
 import { StyledContent } from './style';
 
 interface IProps extends SpaceProps, BorderProps {
