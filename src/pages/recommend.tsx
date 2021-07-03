@@ -1,7 +1,7 @@
 import Content from 'layouts/Content';
 import Layout from 'layouts';
 
-const HomePage: React.FC = () => {
+const RecommendPage: React.FC = () => {
   return (
     <Layout>
       <Content>Content</Content>
@@ -9,4 +9,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default RecommendPage;

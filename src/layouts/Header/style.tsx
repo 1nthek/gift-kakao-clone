@@ -1,24 +1,24 @@
-import styled from 'styled-components';
-import { device } from '~/styles';
+import styled from '@emotion/styled';
 
-export const StyledHeaderWrapper = styled.header`
+export const HeaderWrapper = styled.header`
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 1000;
-  border-bottom: 1px solid #e3e4e5;
   background-color: #fff;
 `;
 
-export const StyledHeader = styled.div`
+export const MainHeader = styled.div`
+  border-bottom: 1px solid #e3e4e5;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 auto;
-  height: 80px;
-  max-width: 1280px;
+  height: 44px;
 `;
 
-export const StyledLogoWrapper = styled.div`
-  width: 81px;
+export const LogoWrapper = styled.div`
+  width: 74px;
+  margin-top: 12px;
 `;
