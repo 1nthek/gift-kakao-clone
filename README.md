@@ -6,7 +6,7 @@
 A simplified Kakao Talk Gift clone project.
 
 ## Tech Stacks 🧑🏻‍💻
-- React, Next.js
-- styled-components
-- Storybook
+- React, Next.js, TypeScript
+- Emotion
 - Jest
+- Storybook
