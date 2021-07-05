@@ -8,5 +8,5 @@ A simplified Kakao Talk Gift clone project.
 ## Tech Stacks 🧑🏻‍💻
 - React, Next.js, TypeScript
 - Emotion
-- Jest
-- Storybook
+- React-Query 
+- Jest, Storybook
