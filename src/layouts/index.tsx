@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header/header';
 // import Footer from './footer';
 
-const Layout: React.FC = ({ children, hideFooter }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header />
