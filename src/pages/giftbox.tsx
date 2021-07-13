@@ -4,7 +4,7 @@ import Layout from 'layouts';
 const GiftBoxPage: React.FC = () => {
   return (
     <Layout>
-      <Content>Content</Content>
+      <Content>Gift</Content>
     </Layout>
   );
 };

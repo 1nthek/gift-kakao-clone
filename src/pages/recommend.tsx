@@ -4,7 +4,7 @@ import Layout from 'layouts';
 const RecommendPage: React.FC = () => {
   return (
     <Layout>
-      <Content>Content</Content>
+      <Content>Recommend</Content>
     </Layout>
   );
 };

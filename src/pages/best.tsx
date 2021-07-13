@@ -4,7 +4,7 @@ import Layout from 'layouts';
 const BestPage: React.FC = () => {
   return (
     <Layout>
-      <Content>Content</Content>
+      <Content>Best</Content>
     </Layout>
   );
 };

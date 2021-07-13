@@ -4,7 +4,7 @@ import Layout from 'layouts';
 const BrandPage: React.FC = () => {
   return (
     <Layout>
-      <Content>Content</Content>
+      <Content>Brand</Content>
     </Layout>
   );
 };
