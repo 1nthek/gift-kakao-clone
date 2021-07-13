@@ -1,6 +1,6 @@
 import Content from 'layouts/Content';
 import Layout from 'layouts';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps } from 'next';
 import { QueryClient } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
 import { fetchCategories } from '@api/category/get-all-categories';
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const queryClient = new QueryClient();
 
   await queryClient.prefetchQuery(['categoryList'], fetchCategories);
