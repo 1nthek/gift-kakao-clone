@@ -17,13 +17,13 @@ const HomePage: React.FC = () => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const queryClient = new QueryClient();
+  const queryClient = new QueryClient();
 
-  // await queryClient.prefetchQuery(['categoryList'], fetchCategories);
+  await queryClient.prefetchQuery(['categoryList'], fetchCategories);
 
   return {
     props: {
-      // dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
+      dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
     },
     revalidate: 1,
   };
