@@ -1,12 +1,7 @@
 import Content from 'layouts/Content';
-import Layout from 'layouts';
 
 const GiftBoxPage: React.FC = () => {
-  return (
-    <Layout>
-      <Content>Gift</Content>
-    </Layout>
-  );
+  return <Content>Gift</Content>;
 };
 
 export default GiftBoxPage;

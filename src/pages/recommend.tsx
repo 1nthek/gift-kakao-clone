@@ -1,12 +1,7 @@
 import Content from 'layouts/Content';
-import Layout from 'layouts';
 
 const RecommendPage: React.FC = () => {
-  return (
-    <Layout>
-      <Content>Recommend</Content>
-    </Layout>
-  );
+  return <Content>Recommend</Content>;
 };
 
 export default RecommendPage;

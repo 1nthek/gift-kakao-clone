@@ -1,12 +1,7 @@
 import Content from 'layouts/Content';
-import Layout from 'layouts';
 
 const BestPage: React.FC = () => {
-  return (
-    <Layout>
-      <Content>Best</Content>
-    </Layout>
-  );
+  return <Content>Best</Content>;
 };
 
 export default BestPage;

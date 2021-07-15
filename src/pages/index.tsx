@@ -1,5 +1,4 @@
 import Content from 'layouts/Content';
-import Layout from 'layouts';
 import { GetServerSideProps } from 'next';
 import { QueryClient } from 'react-query';
 import { dehydrate } from 'react-query/hydration';
@@ -8,11 +7,9 @@ import CategoryBlock from '@components/Category/category-block';
 
 const HomePage: React.FC = () => {
   return (
-    <Layout>
-      <Content>
-        <CategoryBlock />
-      </Content>
-    </Layout>
+    <Content>
+      <CategoryBlock />
+    </Content>
   );
 };
 
@@ -25,7 +22,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       dehydratedState: JSON.parse(JSON.stringify(dehydrate(queryClient))),
     },
-    revalidate: 1,
+    // revalidate: 1,
   };
 };
 
