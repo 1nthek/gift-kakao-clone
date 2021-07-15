@@ -1,13 +1,9 @@
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
+const nextConfig = {
+  /* config options here */
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Important: return the modified config
+    return config;
+  },
+};
 
-module.exports = withPlugins([
-  [
-    optimizedImages,
-    {
-      /* config for next-optimized-images */
-    },
-  ],
-
-  // your other plugins here
-]);
+module.exports = nextConfig;
