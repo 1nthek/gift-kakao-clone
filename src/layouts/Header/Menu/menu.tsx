@@ -15,7 +15,7 @@ const Menu: React.FC<MenuProps> = ({ menus }) => {
   return (
     <MenuWrapper>
       {menus.map(({ title, href }) => (
-        <Anchor href={href} key={title}>
+        <Anchor href={href} key={title} passHref>
           <MenuItemWrapper>
             <MenuItem>{title}</MenuItem>
           </MenuItemWrapper>

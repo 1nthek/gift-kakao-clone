@@ -3,6 +3,10 @@ import styled from '@emotion/styled';
 export const MenuWrapper = styled.ul`
   display: flex;
   border-bottom: 1px solid #e0e1e2;
+
+  > a {
+    flex: 1;
+  }
 `;
 
 export const MenuItemWrapper = styled.li`

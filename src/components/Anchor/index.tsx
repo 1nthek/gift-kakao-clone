@@ -1,15 +1,14 @@
 import React from 'react';
-import { SpaceProps, ColorProps, TypographyProps, LayoutProps } from '~/styles';
-import { StyledLink, StyledAnchor } from './style';
+import Link from 'next/link';
 
-interface IProps extends SpaceProps, ColorProps, TypographyProps, LayoutProps {
+interface IProps {
+  passHref?: boolean;
   href: string;
-  className?: string | undefined;
-  rel?: string | undefined;
-  label?: string | undefined;
+  className?: string;
+  rel?: string;
+  label?: string;
   target?: '_blank' | '_self' | '_parent' | '_top';
   onClick?: (e: React.MouseEvent) => void;
-  variant?: 'link1' | 'link2' | 'link3';
 }
 
 const Anchor: React.FC<IProps> = ({
@@ -20,7 +19,7 @@ const Anchor: React.FC<IProps> = ({
   label,
   target,
   onClick,
-  variant,
+  passHref,
   ...rest
 }) => {
   const internal = /^\/(?!\/)/.test(href);
@@ -28,47 +27,37 @@ const Anchor: React.FC<IProps> = ({
     const isHash = href.startsWith('#');
     if (isHash) {
       return (
-        <StyledAnchor
+        <a
           aria-label={label}
           rel={rel}
           className={className}
           href={href}
           onClick={onClick}
-          $variant={variant}
           {...rest}
         >
           {children}
-        </StyledAnchor>
+        </a>
       );
     }
     return (
-      <StyledAnchor
+      <a
         aria-label={label}
         rel={rel}
         className={className}
         href={href}
         target={target}
         onClick={onClick}
-        $variant={variant}
         {...rest}
       >
         {children}
-      </StyledAnchor>
+      </a>
     );
   }
 
   return (
-    <StyledLink
-      aria-label={label}
-      rel="preload"
-      className={className}
-      href={href}
-      onClick={onClick}
-      $variant={variant}
-      {...rest}
-    >
-      {children}
-    </StyledLink>
+    <Link href={href} passHref {...rest}>
+      <a>{children}</a>
+    </Link>
   );
 };
 
