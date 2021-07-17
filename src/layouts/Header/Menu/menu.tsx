@@ -2,8 +2,13 @@ import { MenuWrapper, MenuItemWrapper, MenuItem } from './style';
 
 import Anchor from 'components/Anchor';
 
+type MenuItem = {
+  title: string;
+  href: string;
+};
+
 type MenuProps = {
-  menus: { title: string; href: string }[];
+  menus: readonly MenuItem[];
 };
 
 const Menu: React.FC<MenuProps> = ({ menus }) => {

@@ -41,7 +41,7 @@ const Header: React.FC = () => {
             <Logo />
           </LogoWrapper>
         </MainHeader>
-        <Menu menus={menus}></Menu>
+        <Menu menus={menus} />
       </HeaderWrapper>
     </>
   );
