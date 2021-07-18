@@ -32,16 +32,23 @@ const menus = [
   },
 ];
 
-const Header: React.FC = () => {
+interface IProps {
+  hideHeaderMenu?: boolean;
+  hideHeaderLogo?: boolean;
+}
+
+const Header: React.FC<IProps> = ({ hideHeaderMenu, hideHeaderLogo }) => {
   return (
     <>
       <HeaderWrapper>
-        <MainHeader>
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
-        </MainHeader>
-        <Menu menus={menus} />
+        {!hideHeaderLogo && (
+          <MainHeader>
+            <LogoWrapper>
+              <Logo />
+            </LogoWrapper>
+          </MainHeader>
+        )}
+        {!hideHeaderMenu && <Menu menus={menus} />}
       </HeaderWrapper>
     </>
   );
