@@ -11,7 +11,7 @@ export const MenuWrapper = styled.ul`
 
 export const MenuItemWrapper = styled.li`
   flex-grow: 1;
-  height: 40px;
+  height: 41px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,11 +19,13 @@ export const MenuItemWrapper = styled.li`
   cursor: pointer;
 `;
 
-export const MenuItem = styled.span`
+export const MenuItem = styled.span<any>`
   font-weight: 600;
   font-size: 15px;
-
-  &.on {
-    border-bottom: 3px solid #fcde11;
-  }
+  height: 100%;
+  align-items: center;
+  display: flex;
+  padding: 0 6px;
+  border-bottom: ${(props) =>
+    props.active ? '3px solid #fcde11' : '3px solid transparent'};
 `;
