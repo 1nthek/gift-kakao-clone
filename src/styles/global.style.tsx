@@ -1,19 +1,26 @@
 import { css } from '@emotion/react';
-
+import emotionReset from 'emotion-reset';
 export const GlobalStyle = css`
+  ${emotionReset}
+
   * {
-    box-sizing: inherit;
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     &::before,
     &::after {
-      box-sizing: inherit;
+      box-sizing: border-box;
     }
   }
 
   html {
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    height: 100%;
   }
 
   html,
@@ -34,20 +41,15 @@ export const GlobalStyle = css`
   textarea,
   span,
   div {
-    font-family: 'Lato', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
+    // font-family: 'Lato', sans-serif;
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
   }
 
   body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: 'Lato', sans-serif;
-    -webkit-tap-highlight-color: transparent;
+    // font-family: 'Lato', sans-serif;
   }
 
   ul {

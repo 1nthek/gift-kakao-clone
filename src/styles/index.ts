@@ -1,5 +1,6 @@
 import { themeGet } from '@styled-system/theme-get';
 import { theme } from './theme';
+import { GlobalStyle } from './global.style';
 
 const breakpoints = ['576px', '768px', '992px', '1200px'];
 
@@ -10,5 +11,5 @@ export const device = {
   xlarge: `@media screen and (min-width: ${breakpoints[3]})`,
 };
 
-export { themeGet, theme };
+export { themeGet, theme, GlobalStyle };
 export * from 'styled-system';

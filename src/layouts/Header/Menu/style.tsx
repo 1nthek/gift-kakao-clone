@@ -1,8 +1,16 @@
 import styled from '@emotion/styled';
 
+export const MenuContainer = styled.nav`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 1px solid #e0e1e2;
+`;
+
 export const MenuWrapper = styled.ul`
   display: flex;
-  border-bottom: 1px solid #e0e1e2;
+  max-width: ${(props) => props.theme.maxWidth.main};
+  width: 100%;
 
   > a {
     flex: 1;

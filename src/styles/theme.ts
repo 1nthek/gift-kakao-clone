@@ -1,6 +1,9 @@
 const breakpoints = ['576px', '768px', '992px', '1200px', '1400px'];
 
 export const theme = {
+  maxWidth: {
+    main: '750px',
+  },
   colors: {
     primary: '#0168fa',
     secondary: '#5f6d88',
